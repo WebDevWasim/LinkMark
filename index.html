@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Linkmark</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Kaushan+Script|Work+Sans|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<!-- Log In Div -->
+	<div id="shape">
+		<h2 id="title"><b>Link Mark</b></h2>
+		<div id="loginSection" style="display: none">
+			<button class="tablink" onclick="openPage('signIn', this, '#fff')" id="defaultOpen">Sign In </button>
+			<button class="tablink" onclick="openPage('newAccount', this, '#fff')">Register</button>
+
+			<div id="signIn" class="tabcontent">
+				<div class="form-group ">
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<input type="email" id="email" class="form-control" placeholder="E-mail" autofocus>
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-key"></i>
+						</div>
+						<input type="password" placeholder="Password" id="password" class="form-control">
+					</div>
+				</div>
+				<button class="btn btn-block" id="logIn">Log In</button>
+			</div>
+
+			<div id="newAccount" class="tabcontent">
+				<div class="form-group ">
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<input type="email" id="createEmail" class="form-control" placeholder="E-mail" autofocus>
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-key"></i>
+						</div>
+						<input type="password" placeholder="Password" id="createPassword" class="form-control">
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-unlock-alt"></i>
+						</div>
+						<input type="password" placeholder="Confirm Password" id="confirmPassword" class="form-control">
+					</div>
+				</div>
+				<button class="btn btn-block" id="signUp">Create Account</button>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- User Div   -->
+
+	<div id="logonSection" style="display: none">
+		<div class="container">
+
+			<div id="userHeader" class="row">
+				<div class="col-xs-6">
+					<p><span id="heading"></span></p>
+				</div>
+				<div class="col-xs-3">
+
+				</div>
+				<div class="col-xs-3">
+					<span style="float:right" id="logOut" class="btn btn-danger"> Log Out </span>
+				</div>
+			</div>
+			<div class="accordion">
+				<p> Add Your Favourite Site Link <span id="toggleIcon"> x </span></p>
+			</div>
+
+			<div id="linkarea">
+
+				<div class="form-group ">
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-globe"></i>
+						</div>
+						<input type="text" id="siteName" class="form-control" placeholder="Site Name" autofocus>
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">
+							<i class="fas fa-link"></i>
+						</div>
+						<input type="url" placeholder="Site URL" id="siteUrl" class="form-control">
+					</div>
+				</div>
+				<button id="addLink" class="btn btn-block"> Add Link </button>
+
+			</div>
+			<div>
+				<h2 id="linkMarks">Linkmarks</h2>
+				<div id="linkList">
+					<h4 id="noLinks" style="text-align: center">No Links Added</h5>
+						<!-- <p> Google <a class="btn btn-primary btn-xs" href="https://www.google.co.in/" target="_blank">Visit</a> <button class="btn btn-danger btn-xs">Delete</button> </p> -->
+				</div>
+			</div>
+
+		</div> <!-- /container -->
+
+	</div>
+
+
+	<!-----------Edit Modal -------------->
+	<div id="editModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<p class="cancel">&times</p>
+			<div class="form-group ">
+				<div class="input-group">
+					<div class="input-group-addon">
+						<i class="fas fa-globe"></i>
+					</div>
+					<input type="text" id="modalsiteName" class="form-control" placeholder="Site Name" autofocus>
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">
+						<i class="fas fa-link"></i>
+					</div>
+					<input type="url" placeholder="Site URL" id="modalsiteUrl" class="form-control">
+				</div>
+			</div>
+			<button id="updateLink" class="btn btn-success btn-block"> Update </button>
+		</div>
+
+	</div>
+
+	<!-----------Delete Modal -------------->
+	<!-- <div id="deleteModal" class="modal">
+
+		<div class="modal-content">
+			<p class="cancel">&times</p>
+			<p style="font-size: 22px;"> Press Delete Button to Delete </p>
+			<button id="deleteLink" class="btn btn-danger btn-block"> Delete </button>
+		</div>
+
+	</div> -->
+	<!-- ====================== SCRIPT ========================= -->
+
+	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>	 -->
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDGjl9OX7JeSt3aRnuOrjl513dUBRioL6I",
+			authDomain: "linkmark-f43ca.firebaseapp.com",
+			databaseURL: "https://linkmark-f43ca.firebaseio.com",
+			projectId: "linkmark-f43ca",
+			storageBucket: "linkmark-f43ca.appspot.com",
+			messagingSenderId: "807292010989"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<!-- javaScript Files	 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="external.js"></script>
+</body>
+
+</html>

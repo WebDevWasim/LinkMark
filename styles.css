@@ -1,0 +1,414 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ef1313;
+}
+
+button {
+  height: 45px;
+  color: #fff;
+}
+
+button:hover {
+  color: #fff;
+}
+
+#title {
+  color: #fff;
+  font-size: 50px;
+  font-family: "Kaushan Script", cursive;
+}
+
+/* ============================ LogIn Div ============================== */
+#shape {
+  padding: 0 25px;
+}
+
+#loginSection {
+  background-color: #fff;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  /* border: 1px solid #e5e5e5; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 476px;
+  margin: 30px auto;
+}
+
+.tablink {
+  float: left;
+  border: 0px solid #000;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 50%;
+}
+
+.tabcontent {
+  display: none;
+  margin: 0;
+  padding: 67px 19px 22px 19px;
+}
+
+#signIn {
+  background-color: #fff;
+}
+
+#newAccount {
+  background-color: #fff;
+}
+
+/* =============== Form ================= */
+
+.input-group-addon {
+  color: #666;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 11px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+.form-control:focus {
+  z-index: 1;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+/* =============== Buttons ================= */
+#logIn {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #fc2020;
+  transition: 0.1s;
+}
+
+#logIn:hover {
+  background-color: #ea1212;
+  color: #fff;
+}
+
+#signUp {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #1e88e5;
+  transition: 0.1s;
+}
+
+#signUp:hover {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+/* #footer{
+	border: 2px solid #c6dcff;
+	border-radius: 3px; 
+  line-height:28px;
+  text-align: center;
+  background-color:#eee;
+  color:red;
+	position: fixed;
+	width:100%;
+  bottom: 100;
+} */
+
+/* =============================== User Div ============================= */
+
+.container {
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+}
+#userHeader {
+  width: 100%;
+  margin: 15px auto;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  padding-top: 10px;
+  height: 55px;
+}
+#userHeader div p {
+  margin-top: 8px;
+  float: left;
+}
+
+#heading {
+  font-size: 18px;
+  line-height: 18px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 6px 14px 7.4px 14px;
+  background-color: #555;
+}
+
+.accordion {
+  font-size: 18px;
+  width: 100%;
+  max-width: 476px;
+  margin: 0px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 10px 10px 1px 10px;
+  border-radius: 3px;
+  background-color: #a3ffcc;
+  color: #006b30;
+  text-align: left;
+  font-weight: bold;
+  outline: none;
+  transition: 0.2s;
+}
+
+.accordion:hover {
+  background-color: #41c185;
+  color: #ccffe7;
+}
+
+.accordion p span {
+  color: #ff000c;
+  font-size: 25px;
+  font-weight: bold;
+  float: right;
+  margin-left: 6px;
+  transition: 0.2s;
+  margin-top: -5.5px;
+}
+
+#linkarea {
+  background-color: #fff;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 476px;
+  margin: 30px auto;
+  padding: 22px 19px 22px 19px;
+}
+
+#linkMarks {
+  color: #fff;
+  font-size: 40px;
+  font-family: "Archivo Black", sans-serif;
+}
+
+#addLink {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #00c903;
+  transition: 0.1s;
+}
+
+#addLink:hover {
+  background-color: #00b502;
+  color: #fff;
+}
+
+#linkList {
+  text-align: left;
+  width: 100%;
+  max-width: 736px;
+  background-color: rgb(255, 255, 255);
+  font-family: "Work Sans", sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 10px 25px;
+  margin: 20px auto;
+}
+
+#linkList span:nth-child(2n) {
+  float: right;
+}
+
+#linkList p {
+  margin: 20px 0px;
+  border: 1px solid rgb(233, 233, 233);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: #555;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+#linkList p span a {
+  margin-left: 10px;
+}
+
+#logOut {
+  font-family: "Archivo Black", sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  font-family: "Work Sans", sans-serif;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  width: 90%;
+  max-width: 476px;
+  padding: 30px 25px 30px 25px;
+  background-color: #fff;
+  margin: auto;
+}
+
+/* The Close Button */
+.cancel {
+  position: absolute;
+  top: -8px;
+  right: 5px;
+  font-size: 30px;
+  color: #b4b4b4;
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.cancel:hover,
+.cancel:focus {
+  color: rgb(104, 100, 100);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#updateLink {
+  font-family: "Archivo Black", sans-serif;
+  background-color: #1e88e5;
+  transition: 0.1s;
+}
+
+#updateLink:hover {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+/* #deleteLink {
+  font-family: "Archivo Black", sans-serif;
+  transition: 0.1s;
+} */
+
+/* =============================== 
+
+@media (max-width: 576px) {
+  #title {
+    font-size: 10em;
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+  }
+
+  #loginSection {
+    max-width: 90%;
+  }
+
+  #linkMarks {
+    font-size: 5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  #linkarea {
+    max-width: 90%;
+    padding: 3.6em 3.2em 3.6em 3.2em;
+  }
+
+  #linkList {
+    max-width: 100%;
+    padding: 0.7em 3.2em;
+  }
+
+  #linkList p {
+    font-size: 3em;
+    padding: 1em;
+    margin: 1.5em 0px;
+    line-height: 1.5em;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  #noLinks {
+    font-size: 2.5em;
+  }
+
+  #linkList p span a {
+    font-size: 1.2em;
+    padding: 0.4em 0.8em;
+    margin-left: 1.2em;
+  }
+
+  .tablink {
+    font-size: 25px;
+  }
+
+  .tabcontent {
+    padding: 8em 3.2em 3.6em 3.2em;
+  }
+
+  .modal {
+    padding-top: 200px;
+  }
+
+  .modal-content {
+    padding: 3.6em 3.2em 3.6em 3.2em;
+    max-width: 90%;
+  }
+
+  .cancel {
+    top: -9px;
+    right: 9px;
+    font-size: 40px;
+  }
+
+  .form-group {
+    margin-bottom: 3em;
+  }
+
+  .input-group {
+    margin-bottom: 3em;
+  }
+
+  .form-control {
+    padding: 1em;
+    font-size: 1.5em;
+  }
+
+  .btn:not(.btn-md) {
+    font-size: 25px;
+  }
+
+  button {
+    height: 2.5em;
+  }
+
+  .input-group-addon {
+    padding: 1em 1.2em;
+    font-size: 1.7em;
+  }
+}
+
+=========================== */
